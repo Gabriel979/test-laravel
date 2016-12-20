@@ -4,6 +4,8 @@
 
 @section('content')
 
+@include('alerts.success')
+
 <div class="contact-content">
 			<div class="top-header span_top">
 				<div class="logo">
@@ -12,7 +14,7 @@
 				</div>
 				<div class="search v-search">
 					<form>
-						<input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}"/>
+						<input type="text" value="Buscar.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}"/>
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -20,21 +22,20 @@
 			</div>
 			<!---contact-->
 <div class="main-contact">
-		 <h3 class="head">CONTACT</h3>
-		 <p>WE'RE ALWAYS HERE TO HELP YOU</p>
+		 <h3 class="head">CONTACTO</h3>
+		 <p>SIEMPRE ESTAMOS PARA AYUDARTE!</p>
 		 <div class="contact-form">
-			 <form>
+			 {!!Form::open(['route'=>'mail.store','method'=>'POST'])!!}
 				 <div class="col-md-6 contact-left">
-					  <input type="text" placeholder="Name" required/>
-					  <input type="text" placeholder="E-mail" required/>
-					  <input type="text" placeholder="Phone" required/>
+					  <input type="text" name="name" placeholder="Nombre" required/>
+					  <input type="text"  name="email" placeholder="E-mail" required/>
 				  </div>
 				  <div class="col-md-6 contact-right">
-					 <textarea placeholder="Message"></textarea>
-					 <input type="submit" value="SEND"/>
+					 <textarea name="mensaje" placeholder="Mensaje"></textarea>
+					 <input type="submit" value="ENVIAR"/>
 				 </div>
 				 <div class="clearfix"></div>
-			 </form>
+			 {!!Form::close()!!}
 	     </div>
 </div>
 

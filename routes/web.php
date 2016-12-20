@@ -32,5 +32,10 @@ Route::get('generos', 'GeneroController@listing');
 
 Route::resource('pelicula', 'MovieController');
 
+Route::resource('mail', 'MailController');
+
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
 
 
