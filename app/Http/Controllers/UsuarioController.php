@@ -12,6 +12,8 @@ use App\Http\Requests\UserCreateRequest;
 use App\Http\Requests\UserUpdateRequest;
 //use Illuminate\Routing\Route;
 
+use Illuminate\Notifications\Notifiable;
+
 
 class UsuarioController extends Controller
 {

@@ -34,8 +34,12 @@ Route::resource('pelicula', 'MovieController');
 
 Route::resource('mail', 'MailController');
 
-Route::get('password/email', 'Auth\PasswordController@getEmail');
-Route::post('password/email', 'Auth\PasswordController@postEmail');
+Route::resource('password/email', 'Auth\ForgotPasswordController');
+//Route::post('password/email', 'Auth\ResetPasswordController');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

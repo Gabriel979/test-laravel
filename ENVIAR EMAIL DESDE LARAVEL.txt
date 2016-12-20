@@ -1,0 +1,73 @@
+COMO ENVIAR UN EMAIL DESDE UN FORM DE CONTACTO CON LARAVEL 5.3 (TAMBIEN DESDE LOCALHOST)
+
+
+*****************************************
+EDITAR EN LARAVEL
+*****************************************
+
+***************
+.ENV
+***************
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=gabrielsanchez.frh@gmail.com
+MAIL_PASSWORD= LA CONTRASEÑA..
+MAIL_ENCRYPTION=ssl
+
+
+****************
+CONFIG\MAIL.PHP
+****************
+'driver' => env('MAIL_DRIVER', 'smtp'),
+
+'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+
+'port' => env('MAIL_PORT', 465),
+
+'from' => [
+        'address' => 'gabrielsanchez.frh@gmail.com',
+        'name' => 'Gabriel',
+    ],
+
+'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+
+
+
+************************************************
+PHP.INI DEL APPSERV, WAMP, XAMP, ETC
+************************************************
+SMTP=smtp.gmail.com
+smtp_port=465
+sendmail_from = mi mail @gmail.com
+
+(MODIFICAR EL ARCHIVO SENDMAIL.INI EN CASO DE QUE EXISTA)
+
+
+
+
+***************************************************************************************
+C:\AppServ\www\test-laravel\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport
+***************************************************************************************
+AGREGAR ESTAS LINEAS ES IMPORTANTE EN EL CASO DE QUERER MANDAR EL CORREO DESDE LOCCALHOST
+******************************************************************************************************
+y por ultimo configurar la cuenta de gmail para que activar el acceso de manejo de aplicaciones poco seguras
+****************************************************************************************************************
+
+EN LA LINEA 263:
+ $options['ssl']['verify_peer'] = FALSE;
+ $options['ssl']['verify_peer_name'] = FALSE;
+
+
+
+**********************************
+CODIGO PHP
+**********************************
+
+Mail::send('emails.contact', $request->all(), function($msj){
+     $msj->subject('Correo de contacto');
+     $msj->to('gabrielsanchez.frh@gmail.com');
+});
+ Session::flash('message','Mesnsaje enviado correctamente');
+ return Redirect::to('/contacto');
+
