@@ -34,11 +34,13 @@ Route::resource('pelicula', 'MovieController');
 
 Route::resource('mail', 'MailController');
 
-Route::resource('password/email', 'Auth\ForgotPasswordController');
+Route::get('password/email', 'Auth\ForgotPasswordController@showLinkRequestForm');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 //Route::post('password/email', 'Auth\ResetPasswordController');
 
-
-
+Route::post('password/reset','Auth\ResetPasswordController@reset');
+Route::get('password/reset/{token}','Auth\ResetPasswordController@showResetForm');
+	
 
 Auth::routes();
 

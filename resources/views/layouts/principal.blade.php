@@ -27,9 +27,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="full">
 			<div class="menu">
 				<ul>
-					<li><a class="active" href="home"><i class="home"></i></a></li>
-					<li><a href="reviews"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
-					<li><a href="contacto"><div class="cnt"><i class="contact"></i><i class="contact1"></i></div></a></li>
+					<li><a class="active" href="{{url('home', $parameters = array(), $secure = null)}}"><i class="home"></i></a></li>
+					<li><a href="{{url('reviews', $parameters = array(), $secure = null)}}"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+					<li><a href="{{url('contacto', $parameters = array(), $secure = null)}}"><div class="cnt"><i class="contact"></i><i class="contact1"></i></div></a></li>
 				</ul>
 			</div>
 		<div class="main">
@@ -44,9 +44,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 	<div class="footer">
-		<h6>Disclaimer : </h6>
-		<p class="claim">This is a freebies and not an official website, I have no intention of disclose any movie, brand, news.My goal here is to train or excercise my skill and share this freebies.</p>
-		<a href="example@mail.com">example@mail.com</a>
+		<h6>Aclaración: </h6>
+		<p class="claim">Esto es un freebies y no un sitio web oficial, no tengo intención de revelar ninguna película, marca, noticias. Mi objetivo aquí es entrenar o ejercitar mi habilidad y compartir estos conocimientos.</p>
 		<div class="copyright">
 			<p> Template by  <a href="http://w3layouts.com">  W3layouts</a></p>
 		</div>

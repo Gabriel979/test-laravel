@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
+use Illuminate\Http\Request;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 
 class ResetPasswordController extends Controller
 {
@@ -30,5 +32,30 @@ class ResetPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+
     }
+
+
+
+    protected $redirectTo = '/admin';
+
+   /* protected function resetPassword($user, $password)
+    {
+        $user->forceFill([
+            'password' => '123456789012345678901234567890123456789012345678901234567890',
+            'remember_token' => Str::random(60),
+        ])->save();
+
+        //Auth::login($user);
+        $this->guard()->login($user);
+    }*/
+
+    
+    protected function resetPassword($user, $password){
+         $user->password = $password;
+         $user->save();
+         Auth::login($user);
+     }
+
+
 }

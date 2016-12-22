@@ -24,15 +24,9 @@ class ForgotPasswordController extends Controller
     use SendsPasswordResetEmails;
 
 
-    public function index(){
-
-         //protected $redirectTo = '/admin';
-         //protected function resetPassword($user, $password){
-           // $user->password = $password;
-            // $user->save();
-            //Auth::login($user);
+    /*public function index(){
         return view('auth.password');
-    }
+    }*/
 
 
     /**
