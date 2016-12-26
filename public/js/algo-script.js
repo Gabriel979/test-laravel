@@ -1,7 +1,7 @@
 
 $("#registro").click(function(){
 	var dato=$("#genre").val();
-	var route= "http://localhost/test-laravel/public/genero";
+	var route= "/genero";
 	var token=$("#token").val();
 
 	$.ajax({

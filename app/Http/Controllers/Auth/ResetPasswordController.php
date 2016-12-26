@@ -36,8 +36,13 @@ class ResetPasswordController extends Controller
     }
 
 
-
     protected $redirectTo = '/admin';
+
+    protected function resetPassword($user, $password){
+        $user->password = $password;
+        $user->save();
+        Auth::login($user);
+    }
 
    /* protected function resetPassword($user, $password)
     {
@@ -49,13 +54,5 @@ class ResetPasswordController extends Controller
         //Auth::login($user);
         $this->guard()->login($user);
     }*/
-
-    
-    protected function resetPassword($user, $password){
-         $user->password = $password;
-         $user->save();
-         Auth::login($user);
-     }
-
 
 }

@@ -1,0 +1,13 @@
+El motor BLADE de LARAVEL, tiene en la carpeta STORAGE/FRAMEWORK/VIEWS.... UN resguardo de las vistas creadas, y hay que eliminarlas para que no las use indefinidamente.
+
+
+
+INPORTANTE!!!!
+
+Después de actualizar la lógica de una directiva Blade, tendrá que eliminar todas las vistas de Blade almacenadas en 
+caché. 
+Las vistas de Blade almacenadas en caché se pueden quitar con el comando:
+
+**************************
+* php artisan view:clear *
+**************************

@@ -3,7 +3,7 @@ $(document).on('click','.pagination a', function(e){
 	e.preventDefault();
 
 	var page=$(this).attr('href').split('page=')[1];
-	var route= "http://localhost/test-laravel/public/usuario";
+	var route= "/usuario";
 
 	$.ajax({
 		url:route,

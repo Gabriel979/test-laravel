@@ -9,7 +9,7 @@ function Carga(){
 	$("#datos").empty();
 
 	var tablaDatos= $('#datos');
-	var route= "http://localhost/test-laravel/public/generos"
+	var route= "/generos"
 
 	$.get(route, function(res){
 		$(res).each(function(key,value){
@@ -20,7 +20,7 @@ function Carga(){
 
 
 function Mostrar(btn){
-	var route='http://localhost/test-laravel/public/genero/'+btn.value+'/edit';
+	var route='/genero/'+btn.value+'/edit';
 
 	$.get(route, function(res){
 		$("#genre").val(res.genre);
@@ -33,7 +33,7 @@ $("#actualizar").click(function(){
 
 	var value=$("#id").val();
 	var dato= $("#genre").val();
-	var route= "http://localhost/test-laravel/public/genero/"+value+"";
+	var route= "/genero/"+value+"";
 	var token= $("#token").val();
 
 	$.ajax({
@@ -54,7 +54,7 @@ $("#actualizar").click(function(){
 
 function Eliminar(btn){
 
-	var route= "http://localhost/test-laravel/public/genero/"+btn.value+"";
+	var route= "/genero/"+btn.value+"";
 	var token= $("#token").val();
 
 	$.ajax({
