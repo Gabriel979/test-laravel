@@ -81,7 +81,7 @@
                                     <a href="{!! URL::to('/pelicula/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="{!! URL::to('/pelicula')!!}"><i class='fa fa-list-ol fa-fw'></i> Peliculas</a>
+                                    <a href="{!! URL::to('/pelicula')!!}"><i class='fa fa-list-ol fa-fw'></i> Películas</a>
                                 </li>
                             </ul>
                         </li>
@@ -93,7 +93,7 @@
                                     <a href="{!!URL::to('/genero/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="{!!URL::to('/genero')!!}"><i class='fa fa-list-ol fa-fw'></i> Generos</a>
+                                    <a href="{!!URL::to('genero')!!}"><i class='fa fa-list-ol fa-fw'></i> Generos</a>
                                 </li>
                             </ul>
                         </li>

@@ -1,4 +1,4 @@
-
+//Para registrar un nuevo genero
 $("#registro").click(function(){
 	var dato=$("#genre").val();
 	var route= "/genero";

@@ -58,8 +58,8 @@ class UsuarioController extends Controller
         
         return view('usuario.index',compact("users"));    //se le pasa como param. la var. $users
         //compact pasa los datos de una BBDD a un array con el nombre users.
-
     }
+
 
     /**
      * Show the form for creating a new resource.

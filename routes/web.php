@@ -28,7 +28,7 @@ Route::resource('log','LogController');
 Route::get('logout','LogController@logout');
 
 Route::resource('genero', 'GeneroController');
-Route::get('generos', 'GeneroController@listing');
+Route::resource('generos', 'GeneroController@listing');
 
 Route::resource('pelicula', 'MovieController');
 

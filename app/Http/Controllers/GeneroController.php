@@ -7,8 +7,10 @@ use App\Genre;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\GenreRequest;
+use Illuminate\Support\Facades\DB;
 
-
+     
+     
 class GeneroController extends Controller
 {
 
@@ -26,11 +28,29 @@ class GeneroController extends Controller
     }*/
 
 
-    public function listing(){
+    /*public function listing(Request $request){
 
         $genres= Genre::all();
-        return response()->json($genres->toArray());
-    }
+        //return response()->json($genres->toArray());
+
+        if($request->ajax()){
+          return response()->json(view('genero.index', compact('genres'))->render());
+        }
+    }*/
+
+
+    /*public function listing(Request $request){
+        //$genres = Genre::all();
+        $genres = DB::table('genres')->paginate(7);
+
+       if ($request->ajax()){
+            //return $genres;
+            //return "Se ejecuta el Ajax del listening!!";
+            return response()->json($genres);
+        }
+         return view('genero.index');
+        //return view('genero.index', compact('genres'));
+    }*/
 
 
     /**
@@ -40,12 +60,42 @@ class GeneroController extends Controller
      */
     public function index(Request $request)
     {
+        //$genres = Genre::all();
+        $genres = DB::table('genres')->paginate(7);
+
         if ($request->ajax()) {
-            $genres = Genre::all();
             return response()->json($genres);
+            //return "AJAX ejecutado desde index()";
+            //return response()->json(view('genero.index', compact('genres'))->render());
         }
-        return view('genero.index');
+
+        if (!$request->ajax()) {
+            return view('genero.index', compact('genres'));
+        }
+        //return view('genero.index');
     }
+
+
+
+
+
+    /*public function index(Request $request)
+    {
+        
+        $genres = DB::table('genres')->paginate(8);
+
+        if ($request->ajax()) {
+            //return response()->json($genres);
+            return response()->json(view('genero.index', compact('genres'))->render());
+        }
+        return view('genero.index',compact("genres"));
+    }*/
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -91,9 +141,10 @@ class GeneroController extends Controller
      */
     public function edit($id)
     {
-        $genre= Genre::find($id);
+        $genres= Genre::find($id);
 
-        return response()->json( $genre->toArray());
+        return response()->json( $genres->toArray());
+        //return view('genero.edit',compact("genres"));
     }
 
     /**
@@ -109,7 +160,7 @@ class GeneroController extends Controller
         $genre->fill($request->all());
         $genre->save();
 
-        return response()->json(['mensaje' => 'Listo']);
+        return response()->json(['mensaje' => 'Genero Actualizado']);
     }
 
     /**
