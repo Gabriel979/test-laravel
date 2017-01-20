@@ -1,7 +1,11 @@
 //Para registrar un nuevo genero
-$("#registro").click(function(){
+$("#registro").click(function(e){
+
+	e.preventDefault();
+
+
 	var dato=$("#genre").val();
-	var route= "/genero";
+	var route= "../genero";
 	var token=$("#token").val();
 
 	$.ajax({
@@ -14,7 +18,8 @@ $("#registro").click(function(){
 			$("#msj-success").fadeIn();
 		},
 		error:function(msj){
-			$("#msj").html(msj.responseJSON.genre);
+			//$("#msj").html(msj.responseJSON.genre);
+			$("#msj-error").html("Error al crear genero!");
 			$("#msj-error").fadeIn();
 		}
 	});

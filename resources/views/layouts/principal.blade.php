@@ -7,12 +7,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cinema A Entertainment Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<title>Cinema XXII</title>
+
+<link href="{{asset('favicon.png')}}" rel='shortcut icon' />
+
 <link href="{{asset('css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
+
+<script src="{{asset('js/control.js')}}"></script>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

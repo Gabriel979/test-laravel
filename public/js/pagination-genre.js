@@ -8,7 +8,6 @@ $(document).on('click','.pagination a', function(e){
 	li.addClass("active");
 
 	var link=$(".pagination li:nth-child(2)");
-	//link.addClass("Hola");
 	link.empty();
 	link.append('<a href="">1</a>');
 
@@ -26,13 +25,19 @@ $(document).on('click','.pagination a', function(e){
 			//$(".genres").html(data);
 
 			$(respuesta).each(function(key,element){
-				var per_page =Number(element.per_page );  
+				//var per_page =Number(element.per_page );
+				var per_page =Number(element.to )-Number(element.from)+1;
 				var i=0;
-
 				for(i=0; i<per_page  ;i++){
-					$("#datos").append('<tr><td>'+element.data[i].genre+'</td><td><button value='+element.data[i].id+' OnClick="Mostrar(this);" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Editar</button>'+"&nbsp;"+'<button class="btn btn-danger"  value='+element.data[i].id+' OnClick="Eliminar(this);" >Eliminar</button></td></tr>');
+					//if(element.data[i].genre != undefined)
+						$("#datos").append('<tr><td>'+element.data[i].genre+'</td><td><button value='+element.data[i].id+' OnClick="Mostrar(this);" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Editar</button>'+"&nbsp;"+'<button class="btn btn-danger"  value='+element.data[i].id+' OnClick="Eliminar(this);" >Eliminar</button></td></tr>');
+					//else
+						//break;
 				}
+
+				$("#current-page").val(element.current_page);
 			});
+
 		}
 	});
 });

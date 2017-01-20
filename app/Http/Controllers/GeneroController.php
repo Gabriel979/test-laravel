@@ -10,7 +10,6 @@ use App\Http\Requests\GenreRequest;
 use Illuminate\Support\Facades\DB;
 
      
-     
 class GeneroController extends Controller
 {
 
@@ -39,19 +38,6 @@ class GeneroController extends Controller
     }*/
 
 
-    /*public function listing(Request $request){
-        //$genres = Genre::all();
-        $genres = DB::table('genres')->paginate(7);
-
-       if ($request->ajax()){
-            //return $genres;
-            //return "Se ejecuta el Ajax del listening!!";
-            return response()->json($genres);
-        }
-         return view('genero.index');
-        //return view('genero.index', compact('genres'));
-    }*/
-
 
     /**
      * Display a listing of the resource.
@@ -65,19 +51,13 @@ class GeneroController extends Controller
 
         if ($request->ajax()) {
             return response()->json($genres);
-            //return "AJAX ejecutado desde index()";
             //return response()->json(view('genero.index', compact('genres'))->render());
         }
 
         if (!$request->ajax()) {
             return view('genero.index', compact('genres'));
         }
-        //return view('genero.index');
     }
-
-
-
-
 
     /*public function index(Request $request)
     {
@@ -92,11 +72,6 @@ class GeneroController extends Controller
     }*/
 
 
-
-
-
-
-
     /**
      * Show the form for creating a new resource.
      *
@@ -105,6 +80,9 @@ class GeneroController extends Controller
     public function create()
     {
         return view('genero.create');
+        if($request->ajax()){
+            return "HOLAAA";
+        } 
     }
 
     /**
@@ -171,9 +149,18 @@ class GeneroController extends Controller
      */
     public function destroy($id)
     {
-        $genre = Genre::find($id);
-        $genre->delete();
+        //Manejo de error en sql al tratar de eliminar un registro!!
 
-        return response()->json(["mensaje"=>"Borrado"]);
+        try {
+
+            $genre = Genre::find($id);
+            $genre->delete();
+        }
+        catch (\Illuminate\Database\QueryException $e){
+            //return response()->json(["mensaje"=>$e->getMessage()]);
+            //return false; funciona, pero no es lo mejor!!
+            echo false;
+        }
+        
     }
 }

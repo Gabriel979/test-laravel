@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });*/
 
+
 Route::get('/','FrontController@index');
 Route::get('home','FrontController@index');
 Route::get('contacto','FrontController@contacto');
@@ -28,7 +29,8 @@ Route::resource('log','LogController');
 Route::get('logout','LogController@logout');
 
 Route::resource('genero', 'GeneroController');
-Route::resource('generos', 'GeneroController@listing');
+//Route::resource('generos', 'GeneroController@listing');
+//Route::post('genero/store','GeneroController@store');
 
 Route::resource('pelicula', 'MovieController');
 
@@ -41,7 +43,6 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::post('password/reset','Auth\ResetPasswordController@reset');
 Route::get('password/reset/{token}','Auth\ResetPasswordController@showResetForm');
 	
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

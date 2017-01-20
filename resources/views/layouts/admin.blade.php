@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Cinema XXII</title>
 
          
     <link href="{{asset('../resources/views/admin/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -75,7 +75,7 @@
                         </li>
                     @endif
                         <li>
-                            <a href="#"><i class="fa fa-film fa-fw"></i> Pelicula<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-film fa-fw"></i> Película<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{!! URL::to('/pelicula/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
@@ -87,13 +87,13 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-child fa-fw"></i> Genero<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-child fa-fw"></i> Género<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="{!!URL::to('/genero/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="{!!URL::to('genero')!!}"><i class='fa fa-list-ol fa-fw'></i> Generos</a>
+                                    <a href="{!!URL::to('genero')!!}"><i class='fa fa-list-ol fa-fw'></i> Géneros</a>
                                 </li>
                             </ul>
                         </li>

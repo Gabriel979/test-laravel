@@ -11,12 +11,7 @@
 					<a href="index.html"><img src="images/logo.png" alt="" /></a>
 					<p>Movie Theater</p>
 				</div>
-				<div class="search">
-					<form>
-						<input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}"/>
-						<input type="submit" value="">
-					</form>
-				</div>
+
 				<div class="clearfix"></div>
 			</div>
 			<div class="header-info">
@@ -143,6 +138,7 @@
 			});
 		</script>
 		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		<script type="text/javascript" src="js/control.js"></script>
 	
 
 
