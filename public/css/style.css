@@ -4,12 +4,19 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
+
+label{
+	color:#FF8000 !important;
+}
+
 body{
 	padding:0;
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
 	background:#fff;
 }
+
 body a{
     transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -105,7 +112,7 @@ p.review{
 	margin:0.8em 0;	
 }
 a.video {
-  background: #dfb636;
+  background: #FF8000;
   font-size: 1.25em;
   text-decoration: none;
   padding: 12px 25px 12px 15px;
@@ -173,10 +180,10 @@ i.video1 {
 	  display: block;
 }
 .menu ul li a.active {
-	background:#dfb636;
+	background:#FF8000;
 }
 .menu ul li a:hover {
-	background: #dfb636;
+	background: #FF8000;
 }
 i.home {
 	width:60px;
@@ -313,7 +320,7 @@ i.contact1 {
 	float: left;
 }
 .logo p {
-	color:#D0D0D0;
+	color:#000000;
 	font-size:1.35em;
 	letter-spacing:2px;
 	text-transform:uppercase;
@@ -393,7 +400,7 @@ i.contact1 {
 	display:none;
 }	
 .review-slider {
-	background: #dfb636;
+	background: #FF8000;
 	padding: 3em 0;
 }
 .video iframe {
@@ -493,7 +500,7 @@ i.book {
 	text-decoration:none;
 	font-size:1.3em;
 	font-weight:700;
-	color:#dfb636;
+	color:#FF8000;
 }
 .news-right-grid a:hover {
 	color:#000;
@@ -956,7 +963,7 @@ a.b-home:hover{
 }
 .might-top a{
 	text-decoration:none;
-	color:#dfb636;
+	color:#FF8000;
 	font-size:1em;
 	display:inline-block;
 	padding: 1em 0 0;	
@@ -1142,7 +1149,7 @@ font-weight: 700;
 	font-weight:600;
 	font-style:italic;
 	font-size:20px;
-	color:#dfb636;
+	color:#FF8000;
 	text-decoration: none;
 }
 .comments-section-grid-text label{
@@ -1206,7 +1213,7 @@ font-weight: 700;
   width: 20%;
 }
 .blog-form input[type="button"]:hover {
-	background: #dfb636;
+	background: #FF8000;
 }
 /*-- responsive-design starts-here --*/
 

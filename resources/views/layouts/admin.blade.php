@@ -13,7 +13,7 @@
     <link href="{{asset('../resources/views/admin/css/metisMenu.min.css')}}" rel="stylesheet">
     <link href="{{asset('../resources/views/admin/css/sb-admin-2.css')}}" rel="stylesheet">
     <link href="{{asset('../resources/views/admin/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-
+    <link href="{{asset('css/style2.css')}}" rel="stylesheet" type="text/css">
     
     <?php
     link_to_asset('../resources/views/admin/css/bootstrap.min.css',$title = null, $attributes = [], $secure = null);
@@ -37,7 +37,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Cinema Admin</a>
+                <a class="navbar-brand" href="#" id="subtitle">Cinema Admin</a>
             </div>
            
 
