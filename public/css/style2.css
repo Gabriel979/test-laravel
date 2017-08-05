@@ -1,4 +1,3 @@
-
 #subtitle{
 	color:#FFFFFF;
 } 
@@ -35,4 +34,13 @@
 .dropdown-menu>li>a:hover{
 	background-color:#FF8000 ;
 	color:#000000;
+}
+
+.btn-primary:hover{
+	background-color:#CC6702 !important;
+	border-color:#8B4602 !important;
+}
+
+.pagination>li>a:hover{
+	color:#CC6702 !important;
 }

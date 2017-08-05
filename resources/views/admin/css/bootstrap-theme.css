@@ -327,11 +327,11 @@ fieldset[disabled] .btn-danger.active {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  background-color: #2e6da4;
-  background-image: -webkit-linear-gradient(top, #FF8000 0%, #2e6da4 100%);
-  background-image:      -o-linear-gradient(top, #FF8000 0%, #2e6da4 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF8000), to(#2e6da4));
-  background-image:         linear-gradient(to bottom, #FF8000 0%, #2e6da4 100%);
+  background-color: #CC6702;
+  background-image: -webkit-linear-gradient(top, #FF8000 0%, #CC6702 100%);
+  background-image:      -o-linear-gradient(top, #FF8000 0%, #CC6702 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF8000), to(#CC6702));
+  background-image:         linear-gradient(to bottom, #FF8000 0%, #CC6702 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
   background-repeat: repeat-x;
 }
@@ -397,10 +397,10 @@ fieldset[disabled] .btn-danger.active {
   .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #fff;
-    background-image: -webkit-linear-gradient(top, #FF8000 0%, #2e6da4 100%);
-    background-image:      -o-linear-gradient(top, #FF8000 0%, #2e6da4 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF8000), to(#2e6da4));
-    background-image:         linear-gradient(to bottom, #FF8000 0%, #2e6da4 100%);
+    background-image: -webkit-linear-gradient(top, #FF8000 0%, #CC6702 100%);
+    background-image:      -o-linear-gradient(top, #FF8000 0%, #CC6702 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF8000), to(#CC6702));
+    background-image:         linear-gradient(to bottom, #FF8000 0%, #CC6702 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
     background-repeat: repeat-x;
   }
@@ -534,10 +534,10 @@ fieldset[disabled] .btn-danger.active {
   background-repeat: repeat-x;
 }
 .panel-primary > .panel-heading {
-  background-image: -webkit-linear-gradient(top, #FF8000 0%, #2e6da4 100%);
-  background-image:      -o-linear-gradient(top, #FF8000 0%, #2e6da4 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF8000), to(#2e6da4));
-  background-image:         linear-gradient(to bottom, #FF8000 0%, #2e6da4 100%);
+  background-image: -webkit-linear-gradient(top, #FF8000 0%, #CC6702 100%);
+  background-image:      -o-linear-gradient(top, #FF8000 0%, #CC6702 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF8000), to(#CC6702));
+  background-image:         linear-gradient(to bottom, #FF8000 0%, #CC6702 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
   background-repeat: repeat-x;
 }

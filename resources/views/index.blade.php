@@ -8,7 +8,7 @@
 			<div class="header">
 			<div class="top-header">
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" alt="" /></a>
+					<a href="#"><img src="images/logo.png" alt="" /></a>
 					<p>Movie Theater</p>
 				</div>
 
@@ -19,15 +19,16 @@
 				{!!Form::open(['route'=>'log.store', 'method'=>'POST'])!!}
 					<div class="form-group">
 						{!!Form::label('correo','Correo:')!!}	
-						{!!Form::email('email',null,['class'=>'form-control', 'placeholder'=>'Ingresa tu correo'])!!}
+						{!!Form::email('email',null,['class'=>'form-control', 'placeholder'=>'Ingresa tu correo (gabrielsanchez.frh@gmail.com)'])!!}
 					</div>
 					<div class="form-group">
 						{!!Form::label('contrasena','Contraseña:')!!}	
-						{!!Form::password('password',['class'=>'form-control', 'placeholder'=>'Ingresa tu contraseña'])!!}
+						{!!Form::password('password',['class'=>'form-control', 'placeholder'=>'Ingresa tu contraseña (7898789)'])!!}
 					</div>
 					{!!Form::submit('Iniciar',['class'=>'btn btn-primary'])!!}
 				{!!Form::close()!!}
 				{!!link_to('password/email',$title='Olvidaste tu contraseña?', $attributes=null, $ecure=null)!!}
+				
 			</div>
 		</div>
 		<div class="review-slider">
@@ -43,7 +44,7 @@
 
 
 		<div class="video">
-			<iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/G4VmJcZR0Yg" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<div class="news">
 			<div class="col-md-6 news-left-grid">

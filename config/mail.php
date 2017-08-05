@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'gabrielsanchez.frh@gmail.com',
-        'name' => 'Gabriel',
+        'address' => 'laravel.aplicacion@gmail.com',
+        'name' => 'Cinema XXII',
     ],
 
     /*
